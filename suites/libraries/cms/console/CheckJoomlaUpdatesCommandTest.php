@@ -15,7 +15,7 @@
  * @since       3.0
  */
 
-use Joomla\CMS\Console\CheckUpdatesCommand;
+use Joomla\CMS\Console\CheckJoomlaUpdatesCommand;
 class CheckJoomlaUpdatesCommandTest extends \PHPUnit\Framework\TestCase
 {
 	/**
@@ -52,6 +52,7 @@ class CheckJoomlaUpdatesCommandTest extends \PHPUnit\Framework\TestCase
 		unset($this->object);
 		parent::tearDown();
 	}
+
 
 	public function testGetUpdateInformation()
 	{
