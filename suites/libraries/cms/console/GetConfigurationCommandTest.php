@@ -50,7 +50,7 @@ class GetConfigurationCommandTest extends \PHPUnit\Framework\TestCase
 		$app = new ConsoleApplication(new Cli([]), $conf, $dispatcher);
 		Factory::$application = $app;
 
-		$this->object = new UpdateCoreCommand;
+		$this->object = new GetConfigurationCommand;
 		$this->object->setApplication($app);
 	}
 
@@ -74,8 +74,8 @@ class GetConfigurationCommandTest extends \PHPUnit\Framework\TestCase
 
 		$configs = $this->object->formatConfig($configs);
 
-		$this->assertArrayHasKey("cwd", $configs);
-		$this->assertArrayHasKey("execution", $configs);
+		$this->assertArrayNotHasKey("cwd", $configs);
+		$this->assertArrayNotHasKey("execution", $configs);
 	}
 
 	public function tetsProcessGroupOption()

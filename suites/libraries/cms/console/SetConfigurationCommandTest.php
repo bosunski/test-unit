@@ -50,7 +50,7 @@ class SetConfigurationCommandTest extends \PHPUnit\Framework\TestCase
 		$app = new ConsoleApplication(new Cli([]), $conf, $dispatcher);
 		Factory::$application = $app;
 
-		$this->object = new UpdateCoreCommand;
+		$this->object = new SetConfigurationCommand;
 		$this->object->setApplication($app);
 	}
 
